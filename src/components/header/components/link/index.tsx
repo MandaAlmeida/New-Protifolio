@@ -1,12 +1,20 @@
+import clsx from "clsx";
+
 interface LinkProps {
   link: string;
+  className?: string;
 }
 
 function LinkHeader(props: LinkProps) {
-  const { link } = props;
+  const { link, className } = props;
   return (
     <li>
-      <a className="text-xs font-bold text-gray1 uppercase hover:text-primary cursor-pointer">
+      <a
+        className={clsx(
+          "font-bold text-gray1 uppercase cursor-pointer",
+          className
+        )}
+      >
         {link}
       </a>
     </li>
