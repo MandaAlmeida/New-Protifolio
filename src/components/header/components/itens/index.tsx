@@ -14,7 +14,7 @@ function ItemHeader(props: itemsProps) {
       className="flex gap-[10px] items-center"
     >
       {children}
-      <strong className="text-sm uppercase text-gray1 hover:text-primary">
+      <strong className="max-lg:text-sm text-[0px] uppercase text-gray1 hover:text-primary">
         {text}
       </strong>
     </a>
