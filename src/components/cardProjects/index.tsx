@@ -28,10 +28,10 @@ const CardProject: React.FC<CardProjectProps> = ({ projects }) => {
               {project.name}
             </span>
             <section className="flex gap-5 items-center">
-              <a href={project.linkGit}>
+              <a target="_black" href={project.linkGit}>
                 <GithubLogo size={16} weight="bold" />
               </a>
-              <a href={project.linkProject}>
+              <a target="_black" href={project.linkProject}>
                 <ArrowSquareIn size={16} weight="bold" />
               </a>
             </section>

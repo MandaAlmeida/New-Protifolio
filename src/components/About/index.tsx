@@ -5,7 +5,7 @@ import Paragrafo from "../paragrafo";
 
 function About() {
   return (
-    <section className="flex flex-col gap-20 w-[71%] max-w-4xl items-center">
+    <section className="flex flex-col gap-20 w-[71%] max-w-4xl items-center text-center">
       <Title>
         <Typewriter
           options={{ loop: true }}

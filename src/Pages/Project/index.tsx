@@ -7,7 +7,7 @@ function Project() {
   const { jsonData } = useFetchData("/src/json/project.json");
   return (
     <>
-      <section className="flex flex-col gap-20 w-[71%] max-w-4xl items-center">
+      <section className="flex flex-col gap-20 w-[71%] max-w-4xl items-center text-center">
         <Title>Todos os meus projetos</Title>
         <Paragrafo
           text="Bem-vindo à minha coleção de projetos!
