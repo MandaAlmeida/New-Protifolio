@@ -5,3 +5,27 @@
 * {
   font-family: "Cantarell", sans-serif;
 }
+
+.slick-slider {
+  height: 100%;
+}
+
+.slick-list {
+  height: 100%;
+  display: flex !important;
+  align-items: center;
+}
+
+.slick-track {
+  display: flex !important;
+  gap: 40px;
+}
+
+.slick-slide {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.slick-center {
+  transform: scale(1.2);
+}
