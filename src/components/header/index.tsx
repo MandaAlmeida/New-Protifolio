@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import { GithubLogo, LinkedinLogo, List } from "@phosphor-icons/react";
 import LinkHeader from "./components/link";
 import ItemHeader from "./components/itens";
@@ -9,6 +10,8 @@ interface headerProps {
 
 function Header(props: headerProps) {
   const { Click, activeMenu } = props;
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   return (
     <header className="flex justify-between items-center w-full">
@@ -32,20 +35,39 @@ function Header(props: headerProps) {
         }
       >
         <a href="#" className="list-none">
-          <LinkHeader link="Amanda Almeida" className="lg:text-base text-xl" />
+          <LinkHeader
+            link={"/"}
+            text="Amanda Almeida"
+            className="lg:text-base text-xl"
+          />
         </a>
         <ul className="flex max-lg:flex-col gap-8 lg:items-center ">
           <LinkHeader
-            className="lg:text-xs text-sm hover:text-primary"
-            link="projetos"
+            className={
+              currentPath === "/"
+                ? "lg:text-xs text-sm text-primary"
+                : "lg:text-xs text-sm text-gray1 hover:text-primary"
+            }
+            link={"/"}
+            text="Projetos"
           />
           <LinkHeader
-            className="lg:text-xs text-sm hover:text-primary"
-            link="sobre"
+            link={"/sobre"}
+            className={
+              currentPath === "/sobre"
+                ? "lg:text-xs text-sm text-primary"
+                : "lg:text-xs text-sm text-gray1 hover:text-primary"
+            }
+            text="sobre"
           />
           <LinkHeader
-            className="lg:text-xs text-sm hover:text-primary"
-            link="contato"
+            className={
+              currentPath === "/contato"
+                ? "lg:text-xs text-sm text-primary"
+                : "lg:text-xs text-sm text-gray1 hover:text-primary"
+            }
+            link={"/contato"}
+            text="contato"
           />
           <ItemHeader
             link="https://github.com/MandaAlmeida"

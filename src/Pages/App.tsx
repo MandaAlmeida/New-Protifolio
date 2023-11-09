@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Header from "../components/header";
-import Home from "./Home";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [active, setActive] = useState(false);
@@ -20,7 +20,7 @@ function App() {
         }
         onClick={openMenu}
       ></div>
-      <Home />
+      <Outlet />
     </div>
   );
 }
