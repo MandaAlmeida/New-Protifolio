@@ -2,26 +2,12 @@ import React from "react";
 import TypeLanguage from "./typeLanguage";
 import { ArrowSquareIn, GithubLogo } from "@phosphor-icons/react";
 import LinkItens from "./linkItens";
+import ArrayProjects from "../../../ArrayProjects/project";
 
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  language1: string;
-  language2: string;
-  linkGit: string;
-  linkProject: string;
-  img: string;
-}
-
-interface ProductListProps {
-  projects: Product[];
-}
-
-const ProductList: React.FC<ProductListProps> = ({ projects }) => {
+const ProductList = () => {
   return (
     <ul className="flex flex-col lg:gap-32 gap-20 items-center ">
-      {projects.map((project) => (
+      {ArrayProjects.map((project) => (
         <li
           key={project.id}
           className="flex flex-col gap-10 lg:gap-0 lg:flex-row justify-between items-center w-full"
