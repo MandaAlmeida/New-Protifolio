@@ -11,7 +11,7 @@ function LinkItens(props: LinkItensProps) {
       target="_blank"
       rel="noopener noreferrer"
       href={href}
-      className="flex gap-3 text-xs font-bold"
+      className="flex gap-3 text-xs font-bold hover:text-primary"
     >
       {text}
       {children}

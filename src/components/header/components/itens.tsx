@@ -11,12 +11,10 @@ function ItemHeader(props: itemsProps) {
       target="_blank"
       href={link}
       rel="noopener noreferrer"
-      className="flex gap-[10px] items-center"
+      className="flex gap-[10px] items-center hover:text-primary dark:hover:text-primary text-gray1  dark:text-white"
     >
       {children}
-      <strong className="max-lg:text-sm text-[0px] uppercase text-gray1 hover:text-primary">
-        {text}
-      </strong>
+      <strong className="max-lg:text-sm text-[0px] uppercase ">{text}</strong>
     </a>
   );
 }

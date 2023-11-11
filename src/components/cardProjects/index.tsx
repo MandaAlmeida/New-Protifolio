@@ -17,9 +17,9 @@ interface CardProjectProps {
 
 const CardProject: React.FC<CardProjectProps> = ({ projects }) => {
   return (
-    <ul className="flex gap-32 justify-between">
+    <ul className="flex gap-10 lg:gap-32 flex-wrap justify-center">
       {projects.map((project) => (
-        <li key={project.id} className="flex flex-col gap-5">
+        <li key={project.id} className="flex flex-col gap-5 ">
           <section className="border border-black rounded-xl p-8 max-w-[360px] h-[236px]">
             <img src={project.img} alt="" />
           </section>

@@ -5,7 +5,7 @@ interface TitleProps {
 function Title(props: TitleProps) {
   const { children } = props;
   return (
-    <h1 className="text-5xl text-black uppercase font-bold">{children}</h1>
+    <h1 className="text-[32px] lg:text-5xl uppercase font-bold">{children}</h1>
   );
 }
 

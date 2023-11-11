@@ -20,11 +20,18 @@ interface ProductListProps {
 
 const ProductList: React.FC<ProductListProps> = ({ projects }) => {
   return (
-    <ul className="flex flex-col gap-32 items-center">
+    <ul className="flex flex-col lg:gap-32 gap-20 items-center ">
       {projects.map((project) => (
-        <li key={project.id} className="flex justify-between items-center">
-          <section className="flex flex-col gap-10 items-start w-[50%]">
-            <h3 className="text-2xl font-bold uppercase">{project.name}</h3>
+        <li
+          key={project.id}
+          className="flex flex-col gap-10 lg:gap-0 lg:flex-row justify-between items-center w-full"
+        >
+          <section
+            className={`flex flex-col lg:order-${
+              project.id % 2 === 0 ? "2" : "1"
+            } gap-10 lg:items-start lg:w-[50%] items-center sm:max-lg:text-center `}
+          >
+            <h3 className="text-2xl font-bold uppercase ">{project.name}</h3>
             <p className="text-sm font-bold">{project.description}</p>
             <section className="flex items-center gap-4">
               <TypeLanguage text={project.language1} />
@@ -43,7 +50,11 @@ const ProductList: React.FC<ProductListProps> = ({ projects }) => {
               />
             </section>
           </section>
-          <img src={project.img} alt="" />
+          <img
+            className={`lg:order-${project.id % 2 === 0 ? "1" : "2"}`}
+            src={project.img}
+            alt=""
+          />
         </li>
       ))}
     </ul>
