@@ -1,5 +1,11 @@
-import { Formik, Form, FormikHelpers } from "formik";
-import Input from "../../components/input";
+import {
+  Envelope,
+  GithubLogo,
+  LinkedinLogo,
+  WhatsappLogo,
+} from "@phosphor-icons/react";
+import Title from "../../components/title";
+import LinkItens from "../../components/link/linkItens";
 
 interface Values {
   Name: string;
@@ -7,45 +13,54 @@ interface Values {
   Mensagens: string;
 }
 
-function Contato() {
+export function Contact() {
   return (
-    <section className="flex flex-col w-full lg:w-[49%] gap-7 items-center">
-      <h3 className="text-xl lg:text-2xl font-bold">Entre me contato</h3>
-      <Formik
-        initialValues={{
-          Name: "",
-          Email: "",
-          Mensagens: "",
-        }}
-        onSubmit={(
-          values: Values,
-          { setSubmitting }: FormikHelpers<Values>
-        ) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 500);
-        }}
-      >
-        <Form className="flex flex-col w-full gap-12">
-          <Input text="Nome" type="name" placeholder="Seu nome" />
-          <Input text="Email" type="email" placeholder="Seu email" />
-          <Input
-            as="textarea"
-            text="Mensagem"
-            type="text"
-            placeholder="Sua mensagem"
-          />
-          <button
-            className="p-3 rounded-xl border border-black hover:border-primary hover:text-primary dark:border-white dark:hover:border-primary dark:text-white dark:hover:text-primary"
-            type="submit"
-          >
-            Enviar
-          </button>
-        </Form>
-      </Formik>
-    </section>
+    <div className="flex font-sans text-neutra flex-col items-center text-center gap-20">
+      <Title children="Entre em contato" />
+
+      <span className="text-2xl">
+        Vamos criar algo incrível juntos! Fique à vontade para me enviar uma
+        mensagem e começarmos essa jornada.
+      </span>
+      <div className="flex gap-12 mt-10 flex-wrap items-center justify-center">
+        <LinkItens
+          href="mailto:almeidafonseca14@gmail.com"
+          aria-label="Gmail"
+          children={<Envelope size={32} />}
+          text="Gmail"
+          className="flex-col-reverse items-center"
+        />
+        <LinkItens
+          href="https://www.linkedin.com/in/amanda-almeida-bab4541ab/"
+          aria-label="Linkedin"
+          children={<LinkedinLogo size={32} />}
+          text="Linkedin"
+          className="flex-col-reverse items-center"
+        />
+
+        <LinkItens
+          href="https://github.com/MandaAlmeida"
+          aria-label="Github"
+          children={<GithubLogo size={32} />}
+          text="Github"
+          className="flex-col-reverse items-center"
+        />
+        <LinkItens
+          href="https://api.whatsapp.com/send?phone=5531999632923"
+          aria-label="Whatsapp"
+          children={<WhatsappLogo size={32} />}
+          text="Whatsapp"
+          className="flex-col-reverse items-center"
+        />
+      </div>
+      <div className="mb-10">
+        <p className=" font-semibold ">
+          <span className="font-light opacity-[55%]">Made by</span> Amanda
+          Almeida
+        </p>
+      </div>
+    </div>
   );
 }
 
-export default Contato;
+export default Contact;

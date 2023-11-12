@@ -3,11 +3,15 @@ import Me from "./assets/Eu.jpeg";
 
 function AboutI() {
   return (
-    <section className="flex lg:flex-row flex-col-reverse sm:max-lg:items-center gap-7 items-center">
-      <img className="lg:w-[50%] w-[60%]" src={Me} alt="Uma foto minha" />
+    <section className="flex lg:flex-row flex-col sm:max-lg:items-center gap-7 items-center">
+      <img
+        className="lg:w-[50%] w-[60%] min-w-[240px]"
+        src={Me}
+        alt="Uma foto minha"
+      />
       <section className="flex flex-col gap-10 max-w-4xl sm:max-lg:text-center sm:max-lg:items-center ">
         <Title>Sobre mim</Title>
-        <p className="text-base lg:text-basefont-bold">
+        <p className="text-xs lg:text-base font-bold">
           Olá! Meu nome é Amanda de Almeida, e estou empolgada em compartilhar
           um pouco mais sobre mim com você. Tenho 22 anos e sou natural de Sete
           Lagoas.

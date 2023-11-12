@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "../components/header";
 import { Outlet } from "react-router-dom";
+import ButtonBar from "../components/buttons-bar";
 
 function App() {
   const [active, setActive] = useState(false);
@@ -37,6 +38,7 @@ function App() {
           onClick={handleOpenMenu}
         ></div>
         <Outlet />
+        <ButtonBar />
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
-import React from "react";
 import TypeLanguage from "./typeLanguage";
 import { ArrowSquareIn, GithubLogo } from "@phosphor-icons/react";
-import LinkItens from "./linkItens";
+import LinkItens from "../../link/linkItens";
 import ArrayProjects from "../../../ArrayProjects/project";
 
 const ProductList = () => {
@@ -28,11 +27,13 @@ const ProductList = () => {
                 href={project.linkGit}
                 text="Ver no GitHub"
                 children={<GithubLogo size={16} weight="bold" />}
+                className="text-xs"
               />
               <LinkItens
                 href={project.linkProject}
                 text=" Acessar site"
                 children={<ArrowSquareIn size={16} weight="bold" />}
+                className="text-xs"
               />
             </section>
           </section>
