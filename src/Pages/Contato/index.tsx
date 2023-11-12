@@ -7,12 +7,6 @@ import {
 import Title from "../../components/title";
 import LinkItens from "../../components/link/linkItens";
 
-interface Values {
-  Name: string;
-  Email: string;
-  Mensagens: string;
-}
-
 export function Contact() {
   return (
     <div className="flex font-sans text-neutra flex-col items-center text-center gap-20">
