@@ -1,24 +1,10 @@
 import { ArrowSquareIn, GithubLogo } from "@phosphor-icons/react";
+import ArrayProjects from "../../ArrayProjects/project";
 
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  language1: string;
-  language2: string;
-  linkGit: string;
-  linkProject: string;
-  img: string;
-}
-
-interface CardProjectProps {
-  projects: Product[];
-}
-
-const CardProject: React.FC<CardProjectProps> = ({ projects }) => {
+function CardProject() {
   return (
     <ul className="flex gap-10 lg:gap-32 flex-wrap justify-center">
-      {projects.map((project) => (
+      {ArrayProjects.map((project) => (
         <li key={project.id} className="flex flex-col gap-5 ">
           <section className="border border-black rounded-xl p-8 max-w-[360px] h-[236px]">
             <img src={project.img} alt="" />
@@ -40,6 +26,6 @@ const CardProject: React.FC<CardProjectProps> = ({ projects }) => {
       ))}
     </ul>
   );
-};
+}
 
 export default CardProject;

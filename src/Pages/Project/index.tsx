@@ -1,10 +1,8 @@
 import CardProject from "../../components/cardProjects";
 import Paragrafo from "../../components/paragrafo";
 import Title from "../../components/title";
-import useFetchData from "../../useFeatchProject";
 
 function Project() {
-  const { jsonData } = useFetchData("/src/json/project.json");
   return (
     <>
       <section className="flex flex-col gap-10 lg:gap-20 lg:w-[71%] max-w-4xl items-center text-center">
@@ -15,11 +13,8 @@ function Project() {
 Explore e aproveite! Se algo chamar sua atenção ou se tiver alguma pergunta, estou à disposição. Estou ansioso para compartilhar mais projetos emocionantes no futuro."
         />
       </section>
-      {jsonData ? (
-        <CardProject projects={jsonData} />
-      ) : (
-        <p>Carregando projetos...</p>
-      )}
+
+      <CardProject />
     </>
   );
 }

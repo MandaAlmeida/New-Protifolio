@@ -21,7 +21,7 @@ function App() {
   }
   return (
     <div className={darkMode}>
-      <div className="px-4 lg:px-[7%] py-20 relative flex flex-col items-center gap-20 lg:gap-32 dark:text-white dark:bg-dark">
+      <div className="px-4 lg:px-[7%] py-20 relative flex flex-col items-center gap-20 lg:gap-32 dark:text-white dark:bg-dark h-full">
         <Header
           activeMenu={active}
           Click={handleOpenMenu}
